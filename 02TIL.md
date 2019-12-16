@@ -143,3 +143,14 @@ $ git commit -m "학습 내용 추가"
 $ git push origin master
 ```
 
+
+
+### (3) 최초 Github 등록시 설정 사항
+
+- `E-mail`과 `이름`을 등록하고 연결한다.
+
+```shell
+$ git config --global user.email "pooo1002@naver.com"
+$ git config --global user.name "ChanOh Jeong"
+```
+
