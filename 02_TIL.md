@@ -18,7 +18,9 @@
 $ git init
 ```
 
-### (1-2) Git으로 프로젝트 관리 삭제 : **`rm -rf .git`**
+### (1-2) Git으로 프로젝트 관리 삭제 : **`rm -rf .git`**  `rm -r .git`
+
+- .git 폴더는 반드시 최상단 폴더에만 있어야 한다(폴더내에 폴더생성할 경우)
 
 - 반드시 작업폴더에서 Git init을 해야한다
 - 잘못 지정한경우 지정된 디렉토리에서 해당 명령어 실행
@@ -116,7 +118,7 @@ $ touch README.md
 
 
 
-### (3) 저장 후 버전관리 : ** `add`**, **`commit`**, **`push`**
+### (3) 저장 후 버전관리 :  `add`**, **`commit`**, **`push`
 
 - 작성이 완료되면 아래의 명령어를 통해 commit 이력을 남기고 원격 저장소로 push한다.
 
@@ -160,4 +162,3 @@ $ git push origin master
 $ git config --global user.email "pooo1002@naver.com"
 $ git config --global user.name "ChanOh Jeong"
 ```
-
