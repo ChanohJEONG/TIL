@@ -18,7 +18,14 @@
 $ git init
 ```
 
+### (1-2) Git으로 프로젝트 관리 삭제 : **`rm -rf .git`**
 
+- 반드시 작업폴더에서 Git init을 해야한다
+- 잘못 지정한경우 지정된 디렉토리에서 해당 명령어 실행
+
+```shell
+$ rm -rf .git
+```
 
 ###  (2) Commit을 위한 Staging : **`git add`**
 
