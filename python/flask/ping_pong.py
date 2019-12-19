@@ -12,6 +12,7 @@ def ping():
 
 @app.route('/pong')
 def pong():
+    #data = request.form.get POST방식일 경우 form으로 받아야함
     data = request.args.get('keyword')  # 입력받은 keyword값 data에 대입
     return render_template('pong.html', data=data)  # pong.html에 data값과 같이 넘겨주기
 
