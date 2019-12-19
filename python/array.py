@@ -1,9 +1,9 @@
 import random
 array = [1,2,3,"four","five",True]
-# print(array)
-# print(array[0:3])
-# print(array[4:])
-# print(array[-1])
+print(array)
+print(array[0:3])
+print(array[4:])
+print(array[-1])
 
 dust = {'영등포구': 100 , '강남구' : 300}#key값은 반드시 string형식으로 만들어야함.
 print(dust['영등포구'])
