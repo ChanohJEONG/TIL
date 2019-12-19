@@ -35,9 +35,29 @@ soup = BeautifulSoup(req,'html.parser')
 exc = soup.select_one('#exchangeList .value')
 # #은 id값
 # .은 class값
-# 바로 내부는 >
+# 바로 내부는 > 부모형제의 경우
 # 바로 내부 아닌 경우에는 띄어쓰기 
 print(exc.text)
 
+```
+
+- 네이버 실시간 검색어 불러오기
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://www.naver.com/'
+
+req = requests.get(url).text
+data = BeautifulSoup(req,'html.parser')
+
+#이부분 연습해야할 듯
+
+sel = '#PM_ID_ct .ah_l .ah_k'
+search = data.select(sel)
+
+for item in search:
+    print(item.text)
 ```
 

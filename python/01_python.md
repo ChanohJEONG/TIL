@@ -29,3 +29,9 @@ $ pip freeze > requirements.txt
 $ pip install -r requirements.txt
 ```
 
+- Flask 구버젼 까는 법
+
+```shell
+$ pip install flask==1.0.0
+```
+
