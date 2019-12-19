@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 연습</title>
+    <style>
+        div {
+            margin: 5px auto;
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            transition-duration: 3s;
+            border: 1px solid black;
+        }
+
+        .each:hover {
+            background-color: red;
+            transition-property: width, height, background-color;
+            width: 200px;
+            height: 200px;
+            transition-duration: 1s, 2s, 0.5s;
+        }
+
+        .scaleup:hover {
+            background-color: blue;
+            transform: scale(2);/*사이즈 확대2배*/
+        }
+
+        .scaledown:hover {
+            background-color: green;
+            transform: scale(0.5);/*사이즈 축소0.5배*/
+        }
+
+        .skew:hover {
+            background-color: orange;
+            transform: skew(40deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="each">each</div>
+    <div class="scaleup">scale up</div>
+    <div class="scaledown">scale down</div>
+    <div class="skew">skew</div>
+</body>
+
+</html>

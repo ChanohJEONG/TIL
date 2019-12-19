@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 연습</title>
+    <style>
+        .rec {
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            transition-duration: 1s;
+        }
+
+        .rec:hover {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+            transform: rotate(360deg);
+        }
+
+        .rec:active {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            transition-duration: 3s;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rec"></div>
+</body>
+
+</html>

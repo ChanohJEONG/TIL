@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 연습</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            position: absolute;
+        }
+
+        #top {
+            background-color: red;
+            left: 10px;
+        }
+
+        #center {
+            background-color: green;
+            top: 150px;
+            left: 150px;
+            z-index: 1;
+        }
+
+        #bottom {
+            background-color: blue;
+            top: 50px;
+            left: 50px;
+        }
+        #bottom > div:nth-child(1){
+            position: static;
+            width: 30px; height : 30px;
+            background-color: lightpink;
+        }
+        #bottom > div:nth-child(2){
+            position: relative;
+            left : 50px; top:50px;
+            width: 30px; height : 30px;
+            background-color: lime;   
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        top
+    </div>
+    <div id="center">
+        center
+    </div>
+    <div id="bottom">
+        <div></div>
+        <div></div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>

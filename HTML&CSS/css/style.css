@@ -1,0 +1,18 @@
+.header{
+	position: fixed;
+	background-color: yellowgreen;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+}
+.img {
+	width : 30%;
+}
+
+@media(max-width:650px){
+	.img{
+		margin-top: 80px;
+		margin-bottom: -50px;
+		width: 100%;
+		}
+	}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 연습</title>
+    <style>
+        #wrap #rec {
+            background-color: #ffff00;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            animation-duration: 2s;
+            animation-name: ani1;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-name: ani1;
+        }
+
+        @keyframes ani1 {
+            from {
+                width: 100px;
+                transform: rotate(0deg)
+            }
+
+            to {
+                width: 500px;
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="rec">rec</div>
+    </div>
+</body>
+
+</html>

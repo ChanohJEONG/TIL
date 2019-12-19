@@ -1,0 +1,18 @@
+1. HTML 문서에 CSS 적용방법
+	- 태그에 직접 / 문서 내부(전체) / 외부
+2. 선택자
+	- 전체 * /태그
+	- Class . / id #
+	- 속성[속성명],[속성명=값] ...
+	- 하위 / 자식
+	- 형제 ~ / 인접 형제 +
+	- 가상
+3. 가시성
+	- display / visibility / opacity(투명도)
+4. 레이아웃
+	- width / height
+	- margin / padding
+	- border / radius
+	- background
+5. font / position / overflow / float
+6. 동적변화, 반응형
