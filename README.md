@@ -3,6 +3,8 @@
 ## WEB 관련 ( HTML/CSS/Javascripts/Jquery)
 
 ## Python
+- flask
+- telegram ChatBot
 
 ## Java
 
