@@ -11,23 +11,23 @@ chat_id = config('CHAT_ID')
 url = "https://api.telegram.org/bot"
 
 
-@app.route('/')
-def hello():
-    return "Hello ChatBot"
+# @app.route('/')
+# def hello():
+#     return "Hello ChatBot"
 
 
-@app.route('/write')
-def write():
-    return render_template('write.html')
+# @app.route('/write')
+# def write():
+#     return render_template('write.html')
 
 
-@app.route('/send')
-def send():
-    text = request.args.get('text')
-    requests.get(f'{url}{token}/sendMessage?chat_id={chat_id}&text={text}')
-    return render_template('send.html')
+# @app.route('/send')
+# def send():
+#     text = request.args.get('text')
+#     requests.get(f'{url}{token}/sendMessage?chat_id={chat_id}&text={text}')
+#     return render_template('send.html')
 
-
+#여기에 URL이 안들어갔는데.. 어떻게 openapi가 작동되는거지? webhook때문인거같은데..
 @app.route(f'/{token}', methods=["POST"])  # 어렵게 만든 이유 : 다른사람이 악용하는것을 막는것.
 def telegram():
     wholeJ = request.get_json()
@@ -38,6 +38,8 @@ def telegram():
     elif text == "로또":
         numbers = range(1, 46)
         return_text = random.sample(numbers, 6)  # numbers안에서 6개 무작위 뽑아줌
+    elif text == "배고파":
+        return_text = "그만 먹어 뚱뚱아"
     else:
         return_text = "뭐임마?"
     requests.get(
