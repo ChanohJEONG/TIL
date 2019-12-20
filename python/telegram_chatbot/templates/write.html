@@ -9,11 +9,10 @@
 </head>
 
 <body>
-
-<h1>사용자는 {{ userName }} 입니다.</h1>
-<h2>사용자 랭크는 {{ tier }} 입니다.</h2>
-<h3>총 승리 : {{ wins }}</h3>
-<h3>랭킹은 : {{ rank }} 위 입니다.</h3>
+    <form action="/send">
+        <input type="text" name="text">
+        <input type="submit" value="Send Message">
+    </form>
 </body>
 
 </html>

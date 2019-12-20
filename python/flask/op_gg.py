@@ -19,7 +19,8 @@ def opgg():
     soup = BeautifulSoup(req,'html.parser')
     tier = soup.select_one('#SummonerLayoutContent > div.tabItem.Content.SummonerLayoutContent.summonerLayout-summary > div.SideContent > div.TierBox.Box > div > div.TierRankInfo > div.TierRank')
     wins = soup.select_one('#SummonerLayoutContent > div.tabItem.Content.SummonerLayoutContent.summonerLayout-summary > div.SideContent > div.TierBox.Box > div > div.TierRankInfo > div.TierInfo > span.WinLose > span.wins')
-    return render_template('opgg.html',userName = userName, tier = tier.text, wins = wins.text)
+    rank = soup.select_one('body > div.l-wrap.l-wrap--summoner > div.l-container > div > div > div.Header > div.Profile > div.Information > div.Rank > div > a')
+    return render_template('opgg.html',userName = userName, tier = tier.text, wins = wins.text, rank = rank.text)
 
 
 
