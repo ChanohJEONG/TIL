@@ -5,7 +5,9 @@
 - 가장 어렵고, 보안이 강하고,인기가 많은 기술
 - JPA,SQLRcam? flask, Django -> Database에 삽입 삭제 해주는 기능을 간단히 사용가능?
 
+![image-20191224130247360](00_Spring Boot.assets/image-20191224130247360.png)
 
+![image-20191224130334461](00_Spring Boot.assets/image-20191224130334461.png)
 
 - Controller!! 웹 불러오는 방법 2가지(html or 직접 입력)rest를 붙이냐 안붙이냐!
 
