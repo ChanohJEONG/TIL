@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>naver transformation</title>
+</head>
+<body>
+	<input type="text" id="text">
+	<button>한글->영어번역</button>
+	<hr>
+	
+	<script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script> <!-- CDN 방식 -->
+	<!--  getKakao 주소 호출 -->
+	<!--  parsing 후 화면에 출력 -->
+
+	<script>$('button').click(function(){ // 버튼 클릭시
+		$.ajax({
+			url : '/getNaver' ,
+			type : 'get' ,
+			data : {'text' : $('#text').val() } ,
+			success : function(res){
+				//parsing하기
+				var message = res.message
+				var result = message.result
+				var translatedText = result.translatedText
+				var html = '<h1>' + translatedText + '</h1>'
+				$('hr').after(html);
+			}
+		})
+	});
+	</script>
+
+</body>
+</html>

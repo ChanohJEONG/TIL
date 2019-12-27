@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="common/head">
+
+
+
+<title>Map</title>
+</head><body>
+	<nav th:replace="common/nav"></nav>
+
+	<div class="jumbotron">
+		<div class="container text-center">
+			<div id="map" style="width: 500px; height: 400px; margin: 0 auto;"></div>
+		</div>
+	</div>
+
+	<script
+		src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=51df918843905cae9b7b7d07b977da49"></script>
+	<script>
+		navigator.geolocation.getCurrentPosition(function(pos) {
+			var latitude = pos.coords.latitude;
+			var longitude = pos.coords.longitude;
+			alert(" your location : " + latitude + ", " + longitude);
+		});
+		var container = document.getElementById('map');
+		var options = {
+			center : new kakao.maps.LatLng(37.4980239, 127.027572), // 강남역
+			level : 4
+		};
+		var map = new kakao.maps.Map(container, options);
+		var markerPosition = new kakao.maps.LatLng(37.4980239, 127.027572);
+		var marker = new kakao.maps.Marker({
+			position : markerPosition
+		});
+		marker.setMap(map);
+
+		$.ajax({
+			url : '/map/getPoint',
+			data : {"lat": 37.4980239, "lng": 127.027572},
+			success : function(res) {
+				for (var i = 0; i < res.length; i++) {
+					var marker = new kakao.maps.Marker({
+						map : map, // 마커를 표시할 지도
+						position : new kakao.maps.LatLng(res[i].latitude,
+								res[i].longitude),
+						title : res[i].title,
+					});
+				}
+			}
+		});
+	</script>
+	<footer th:replace="common/footer"> </footer>
+</body>
+</html>

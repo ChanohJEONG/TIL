@@ -2,13 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Paging</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<th:block th:each="page : ${#numbers.sequence(start,end)}">
-		<span th:if="${now_page == page}" th:text="${page}"}></span>
-		<a href="#" th:unless="${now_page == page}">[[${page}]]</a>
-	</th:block>
-
+  <th:block th:each="pageNumber : ${#numbers.sequence(1, 10)}">
+    <a th:href="@{/linkUrl(page=${pageNumber})}" th:text="${pageNumber}"></a>
+  </th:block>
 </body>
 </html>
