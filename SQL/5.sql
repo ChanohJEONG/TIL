@@ -55,3 +55,14 @@ SELECT 제품명,수량,주문일자
  JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO WHERE DEPT.LOC = 'NEW YORK' OR DEPT.LOC = 'DALLAS'
  GROUP BY DEPT.DEPTNO;
  
+ SELECT E1.EMPNO, E1.ENAME, E2.ENAME AS MGR, E1.MGR AS CONFIG
+  FROM EMP E1
+  JOIN EMP E2
+    ON E1.MGR = E2.EMPNO;
+ 
+ select * from 제품;
+ select * from 주문;
+ 
+select * from 제품 p
+ left join 주문 o
+   on p.제품번호 = o.주문제품;
