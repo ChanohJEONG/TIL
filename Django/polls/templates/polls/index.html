@@ -1,0 +1,13 @@
+{% load static %}
+
+<link rel='stylesheet' 
+  href='{% static "polls/style.css"%}'>
+
+{% for question in latest_question_list %}
+  <!-- <a href='/polls/{{ question.id }}'> -->
+  <a href='{% url "detail" question.id %}'>
+    <p>{{ question.question_text }}</p>
+  </a>
+{% endfor %}
+
+<button onclick='location="add_form"'>질문 등록</button>

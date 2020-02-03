@@ -1,0 +1,12 @@
+ <!-- post방식일때 csrf 기능 적용 -->
+ <form method="post" action="{% url 'adding' %}">
+    {% csrf_token %}
+
+    질문 내역 : <input type="text" name = question size ="50" >
+    <br>
+    보기 1 : <input type="text" name = answer1><br>
+    보기 2 : <input type="text" name = answer2><br>
+    보기 3 : <input type="text" name = answer3><br>
+    보기 4 : <input type="text" name = answer4><br>
+    <input type="submit" value="등록">
+</form>
